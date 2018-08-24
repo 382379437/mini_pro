@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<!-- <view></view>  -->
+<view class='main'>
+  <view class='top'>
+    <view class='t-block-view' bindtap='spread' data-num='0'>
+      <view class='t-block-v-t'><image src='/image/sy_1.png'/></view>
+      <view class='t-block-v-b'>游戏</view>
+    </view>
+    <view class='t-block-view' bindtap='spread' data-num='1'>
+      <view class='t-block-v-t'><image src='/image/sy_3.png'/></view>
+      <view class='t-block-v-b'>用户</view>
+    </view>
+    <view class='t-block-view' bindtap='spread' data-num='2'>
+      <view class='t-block-v-t'><image src='/image/sy_4.png'/></view>
+      <view class='t-block-v-b'>开局</view>
+    </view>
+    <view class='t-block-view' bindtap='spread' data-num='3'>
+      <view class='t-block-v-t'><image src='/image/sy_5.png'/></view>
+      <view class='t-block-v-b'>数据</view>
+    </view>
+    <view class='t-block-view' bindtap='spread' data-num='4'>
+      <view class='t-block-v-t'><image src='/image/sy_9.png'/></view>
+      <view class='t-block-v-b'>系统</view>
+    </view>
+    <view class='t-block-view' bindtap='spread' data-num='5'>
+      <view class='t-block-v-t'><image src='/image/sy_7.png'/></view>
+      <view class='t-block-v-b'>商城</view>
+    </view>
+  </view>
+  <view class='line-hr'></view>
+  <view class='middle'>
+    
+      <view class='m-line' wx:for="{{nowMenu}}" wx:for-item="item" wx:for-index="vo" wx:key="nowkey"  bindtap='toJump' data-openbox="{{item.openbox}}" data-num="{{vo}}" data-url="{{item.url}}">
+        <view class='m-line-l'><image src='/image/sy_common2.png'></image></view>
+        <view class='m-line-m'><text>{{item.title}}</text></view>
+        <view class='m-line-r'><image src='/image/down.png' ></image></view>
+      </view>
+    
+  </view>
+  <view class='line-hr'></view>
+  <view class='bottom'>
+  
+  
+  </view>
+</view>
+
+

@@ -1,0 +1,77 @@
+/**index.wxss**/
+
+.main{
+  margin: 0 auto;
+  min-height: 600rpx;
+  text-align: center;
+}
+.top{
+  min-height: 350rpx;
+}
+.middle{
+  min-height: 350rpx;
+  overflow-y: auto;
+}
+.bottom{
+  min-height: 400rpx;
+}
+.t-block-view{
+  width: 130rpx;
+  float: left;
+  margin-left: 35rpx;
+  margin-top: 20rpx;
+}
+.t-block-v-t{
+  height: 100rpx;
+
+}
+.t-block-v-t image{
+  
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 22rpx;
+}
+.line-hr{
+  width: 100%;
+  height: 18rpx;
+  background-color: rgb(241, 241, 241);
+}
+.m-line-l{
+  width: 20%;
+  height: 80rpx;
+}
+.m-line-m{
+  width: 60%;
+  height: 80rpx;
+  text-align: left;
+  color: rgb(107, 107, 107);
+}
+.m-line-r{
+  width: 20%;
+  height: 80rpx;
+}
+.m-line view{
+  float: left;
+  line-height: 80rpx;
+}
+.m-line image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 15rpx;
+}
+.m-line-r image{
+  width: 20rpx;
+  height: 40rpx;
+  margin-top: 19rpx;
+}
+.m-line-m, .m-line-r{
+  border-bottom: 5rpx solid rgb(241, 241, 241);
+}
+
+
+
+
+
+
+
+

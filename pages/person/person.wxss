@@ -1,0 +1,41 @@
+/* pages/person/person.wxss */
+.main{
+  width: 94%;
+  margin: 0 auto;
+}
+.line{
+  border-bottom: 5rpx solid rgb(241, 241, 241);
+  line-height: 150rpx;
+  height: 150rpx;
+}
+.headtxt{
+  line-height: 150rpx;
+  height: 150rpx;
+  float: left;
+  width: 45%;
+  padding-left: 20rpx;
+}
+.headview{
+  line-height: 150rpx;
+  height: 150rpx;
+  float: right;
+  width: 50%;
+  text-align: right;
+  /* background-color: gainsboro; */
+}
+.headimg{
+  margin-top: 8rpx;
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 28rpx;
+}
+.headrightimg{
+  width:16rpx;
+  height:30rpx;
+  margin-top: 63rpx;
+  margin-left: 20rpx;
+  float: right;
+}
+.txt{
+  color: rgb(106, 106, 106);
+}

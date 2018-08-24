@@ -1,0 +1,19 @@
+<!--pages/detail/detail.wxml-->
+
+<view class='main'>
+  <view class='line' wx:for="{{info}}" wx:for-item="item" wx:for-index="vo" wx:key="wxkey">
+    <view class='headtxt'>
+      {{item.title}}
+    </view>
+    <view class='headview' wx:if="{{item.type == 'img'}}">
+      <image src='{{item.val}}' class='headimg'/>
+      <image wx:if="{{is_edit}}" src='/image/down.png' class='headrightimg'/>
+    </view>
+    
+    <view class='headview' wx:else>
+      <text>{{item.val}}</text>
+      <image wx:if="{{is_edit}}" src='/image/down.png' class='headrightimg'/>
+    </view>
+  </view>
+
+</view>

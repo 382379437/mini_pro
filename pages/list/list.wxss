@@ -1,0 +1,84 @@
+/* pages/list/list.wxss */
+view{
+  /* border: 1px solid; */
+}
+.main{
+  min-height: 500px
+}
+.line{
+  /* border: 1px solid yellow; */
+  height: 80px;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  margin: 5px;
+  text-align: center;
+}
+.l-h{
+  height: 40px;
+  line-height: 40px;
+}
+.l-h view{
+  /* width: 16%; */
+  /* background-color: ghostwhite; */
+  float: left;
+}
+.l-top{
+
+}
+.l-bottom{
+  font-size: 12px;
+  color: gray;
+}
+.search input{
+  height:40px;
+  line-height:40px;
+  width:54%;
+  float:left;
+  padding-left:2px;
+}
+.search image{
+  width: 20px;
+  height: 20px;
+  float: left;
+  padding-top:10px;
+  padding-left:8px;
+
+}
+.search text{
+  padding:2px;
+}
+
+.education_inp{
+  width: 30px;
+  float: left;
+}
+.educat{
+  
+  width: 47px;
+}
+.educat-sp{
+  border:1px solid gainsboro;
+  padding: 5px 1px;
+  border-radius: 4px;
+}
+
+.float-r{
+  float: right;
+}
+.txt-c{
+  text-align: center;
+}
+.view-page{
+  text-align: center;
+  font-size:17px;
+  color: rgb(116, 116, 116);
+  line-height:80px;
+}
+.view-page image{
+  width:11px;
+  height:15px;
+  padding:0 35px;
+}
+.btn{
+  margin-top:8px;
+}

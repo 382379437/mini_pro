@@ -1,0 +1,61 @@
+<!--pages/list/list.wxml--> 
+<!--  通用列表页面模板  -->
+<!-- 搜索区-start -->
+<view class='search'>
+<!-- 仅当有可搜索字段时，显示组件-start -->
+  <view><image wx:if="{{searchParamArrTitle.length>0}}" src='/image/search.png'></image>
+  <input wx:if="{{searchParamArrTitle.length>0}}" type='text' placeholder='请输入{{searchParamArrTitle}}搜索' bindinput="saveSearchParam"></input>
+  <input wx:else disabled='disabled' type='text' style='width:72%;' placeholder='' bindinput="saveSearchParam"></input>
+  <picker wx:if="{{searchParamArrTitle.length>0}}" class='education_inp educat'  bindchange="bindPickerChange" value="{{index}}"  range="{{searchParamArrTitle}}">
+        <span class='educat-sp'>{{searchParamArrTitle[index]}}</span>
+  </picker>
+<!-- 仅当有可搜索字段时，显示组件-end -->
+
+
+  <picker class='education_inp'  bindchange="bindPickerChange2" value="{{orderIndex}}"  range="{{orderTitle}}">
+        <span>排序</span>
+  </picker>
+
+
+  <picker class='education_inp '  bindchange="bindPickerChange3" value="{{orderMethodIndex}}"  range="{{orderMethodTitle}}">
+        <span>升降</span>
+  </picker>
+
+  <text class='search-btn ' bindtap='toseach'>搜索</text>
+  </view>
+</view>
+<!-- 搜索区-end  -->
+
+<!-- 页面主体 start -->
+<view class='main'>
+  <view class='line' wx:for="{{info_list}}" wx:key="key1" wx:for-item="item" wx:for-index="vo">
+    <view class='l-h l-top'>
+      <view class='v-w-21' wx:for="{{item.field_arr}}" wx:key="key2" wx:for-item="objrow" wx:if="{{objrow.type != 'pk'}}"><text>{{objrow.title}}</text></view >
+      <view class='v-w-15 btn' wx:if="{{btn_arr}}" bindtap='modalinput' data-topkid="{{item.main}}">{{btn_arr}}</view>
+      <view class='v-w-15 ' wx:else></view>
+    </view>
+    <view class='l-h l-bottom'>
+      <view class='v-w-21' wx:for="{{item.field_arr}}" wx:key="key3" wx:for-item="objrow"><text>{{objrow.val}}</text></view>
+      <view class='btn v-w-15' wx:if="{{item.main}}" bindtap='todetail' data-id='{{item.main}}'>详情</view>
+      <view class=' v-w-15' wx:else></view>
+    </view>
+  </view>
+</view>
+<!-- 页面主体 end -->
+
+<!-- 分页区-start -->
+<view class='view-page '>
+    <!-- 上一页 -->
+    <image src='/image/up.png' bindtap='getDataUp' data-page='{{page}}'></image>
+    <text>{{page}}</text>/<text>{{last_page}}</text>
+    <!-- 下一页 -->
+    <image src='/image/down.png' bindtap='getDataDown' data-page='{{page}}'></image>
+    <text class='ftzs'>共:{{total}}条</text>
+    
+</view>
+<!-- 分页区-end  -->
+
+<!--show.wxml-->
+<modal hidden="{{hiddenmodalput}}" title="请输入房卡数量" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input type='text'placeholder="请输入房卡数量" bindinput='modalsaveinputinfo'/>
+</modal>

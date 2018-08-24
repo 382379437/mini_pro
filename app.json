@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/index/index",
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/person/person"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#009b4c",
+    "navigationBarTitleText": "良人游戏小程序后台",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"/image/home.png",
+        "selectedIconPath": "/image/home1.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "/image/person.png",
+        "selectedIconPath":"/image/person1.png"
+      }
+    ],
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#009b4c",
+    "color":"#000000"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
